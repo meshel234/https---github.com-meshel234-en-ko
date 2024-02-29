@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English to Korean Translator</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="koen.css">
+</head>
+<body>
+
+<div class="translator-container">
+  <textarea id="inputText" placeholder="Enter English text..."></textarea>
+  <button id="copyInput" class="icon-btn" onclick="copyText('inputText')"><i class="fas fa-copy"></i></button>
+  <button id="speakInput" class="icon-btn" onclick="speakText(document.getElementById('inputText').value, 'en-US')"><i class="fas fa-volume-up"></i></button>
+  <button id="translateBtn" onclick="translateText()">Translate</button>
+  <textarea id="outputText" placeholder="Translated text will appear here..." readonly></textarea>
+  <button id="copyOutput" class="icon-btn" onclick="copyText('outputText')"><i class="fas fa-copy"></i></button>
+  <button id="speakOutput" class="icon-btn" onclick="speakText(document.getElementById('outputText').value, 'ko-KR')"><i class="fas fa-volume-up"></i></button>
+</div>
+
+<script src="koen.js"></script>
+</body>
+</html>
